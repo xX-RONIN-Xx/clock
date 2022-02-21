@@ -1,0 +1,47 @@
+body {
+    background-image: url(./img/backg.png);
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    text-shadow: 0 0 5px black;
+}
+.clock{
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 5px black;
+}
+.clock-face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);    
+}
+.hand{
+    width: 50%;
+    height: 6px;
+    background-color: black;
+    position:absolute;/* establece un punto, donde todos los que tengan relative ocuparan el mismo lugar unos sobre otros*/
+    top:50%;
+    border-radius: 3px;
+    transform:rotate(90deg);/*pone el div vertical*/
+    transform-origin: 100%;/*corre el eje de rotacion hacia la punta de la aguja del reloj (centro del mismo)*/  
+    box-shadow: 0 0 5px black; 
+}
+.second-hand{
+    height: 2px;
+}
+.minute-hand{
+    height: 4px;
+}
+.transition{
+    transition: all 0.1s;
+}
